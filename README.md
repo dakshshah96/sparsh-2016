@@ -3,7 +3,7 @@ Welcome to Sparsh's Web Development Project!
 
 Sparsh is SVNIT's annual techno-cultural fest and the largest of its kind in Gujarat.
 
-This is the
+This is the GitHub project page for Sparsh's website. Below, you'll find a few important links, guides and instructions.
 
 
 Links
