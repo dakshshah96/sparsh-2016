@@ -1,5 +1,3 @@
-![](http://img.daksh.me/sparsh-logo.jpg)
-
 Welcome to Sparsh's Web Development Project!
 =======================
 
@@ -25,3 +23,5 @@ Participating in Open Source (Guides and Etiquette)
 -------------
 
 [Participating in Open Source](https://github.com/btford/participating-in-open-source)
+
+![](http://img.daksh.me/sparsh-logo.jpg)
