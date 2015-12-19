@@ -1,39 +1,93 @@
+<!--
+
+Changes made are listed here:
+
+1.  Added header content for SEO (Facebook, Twitter, etc.)
+2.  Change CSS files to CDN networks
+3.  Change JavaScript files to CDN networks
+4.  Added Spread the Word in Contact section
+5.  Added countdown timer
+6.  Wrote CSS to make countdown timer responsive on mobile
+7.  Removed all files which aren't required
+8.  Made a new footer section and added content
+9.  Made a new favicon and added it to index.html
+8.  Made the contact form responsive
+9.  Made all text and corresponding images responsive
+10. Made the countdown timer
+
+-->
+
+
+<!--
+
+Changes to be made before uploading on GitHub
+1. Change temp CSS files to CDN commented code
+2. Remove useless font awesome CSS
+3. Update e-mail link in Contact section
+4. Update social sharing links in Spread the Word section
+
+-->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <link rel="icon" href="http://daksh.me/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- <link rel="alternate" type="application/rss+xml" title="Sparsh 2K16" href="#"> -->
+    <meta property="article:publisher" content="https://www.facebook.com/Sparsh.NITsurat">
+    <meta property="article:author" content="https://www.facebook.com/Sparsh.NITsurat">
+    <meta property="twitter:account_id" content="1510093219">
+    <title>Sparsh 2K16 - SVNIT</title>
+    <meta name="description" content="Sparsh is SVNIT's annual techno-cultural fest and the largest of its kind in Gujarat.">
+    <meta name="robots" content="noodp">
+    <!-- <link rel="canonical" href="Website URL here"> -->
+    <meta property="description" content="Sparsh is SVNIT's annual techno-cultural fest and the largest of its kind in Gujarat.">
+    <meta property="og:site_name" content="Sparsh 2K16">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Sparsh is SVNIT's annual techno-cultural fest and the largest of its kind in Gujarat.">
+    <!-- <meta property="og:url" content="Website URL here"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
 
-    <title>Grayscale - Start Bootstrap Theme</title>
+    <!-- Font Awesome CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
+
 
     <!-- Bootstrap Core CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="temp/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
 
-    <!-- Custom CSS -->
-    <link href="css/grayscale.css" rel="stylesheet">
-      <link rel="stylesheet" href="css/style.css">
+    <!-- Theme & Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 
-    <!-- Custom Fonts -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- jQuery 1.10.2 (Compatible with countdown timer - DO NOT change order of scripts) -->
+    <script src="temp/jquery.min.js"></script>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!-- Flip Clock JavaScript -->
+    <script src="js/flipclock-custom.js"></script>
+
+    <!-- Google Webfont Loader -->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js" async></script>
+    <script>
+      WebFontConfig = {
+        google: {
+        families: ['Roboto:regular,bold:latin', 'Lora:regular,bold,italic,bolditalic:latin']
+        }
+      };
+    </script>
 
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-custom navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
@@ -52,10 +106,10 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" href="#page-top">Home</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#download">Download</a>
+                        <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
@@ -66,29 +120,71 @@
         </div>
         <!-- /.container -->
     </nav>
-   
-   
-
-        <script src="js/index.js"></script>
-        
 
     <!-- Intro Header -->
-    
-<script src="js/index.js"></script>
- 
-    <!-- About Section -->
-    <section id="about" class="container content-section text-center">
-    
-        <div class="row">
-        
-            <div class="col-lg-8 col-lg-offset-2">
-            			
-                <h2></h2>
-                
-                <p><a href="#"></a></p>
-                <p><a href="#"></a></p>
-                <p></p>
+
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <a href="http://svnit-sparsh.net"><img alt="Sparsh 2K16 - SVNIT" class="img-responsive" style="width: 350px; height: 317px; margin: 0 auto;" src="img/sparsh-logo.png"></a>
+                        <p class="intro-text">Sparsh is SVNIT's annual techno-cultural fest and the largest of its kind in Gujarat.</p>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-8 col-xs-offset-3 clock-col">
+                    <div style="margin: 2em 0 2em 0;" class="clock"></div>
+                  </div>
+                </div>
             </div>
+        </div>
+    </header>
+
+    <!-- JavaScript to manage the countdown timer -->
+    <script type="text/javascript">
+			var clock;
+
+			$(document).ready(function() {
+
+				// Grab the current date
+				var currentDate = new Date();
+
+				// Set some date in the future. In this case, it's always Jan 1
+				var futureDate  = new Date("2016-02-20");
+
+				// Calculate the difference in seconds between the future and current date
+				var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+				// Instantiate a coutdown FlipClock
+				clock = $('.clock').FlipClock(diff, {
+					clockFace: 'DailyCounter',
+					countdown: true
+				});
+			});
+		</script>
+
+    <!-- JavaScript to show the globe animation -->
+    <section id="globe" class="container text-center">
+      <script src="js/index.js"></script>
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" style="margin-top: 700px;" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>About Sparsh</h2>
+            </div>
+          </div>
+          <div style="margin-top: 50px;" class="row">
+            <div class="col-xs-6 sparsh-info-about">
+                <p>Sparsh is the annual techno-cultural festival of Sardar Vallabhbhai National Institute of Technology. It usually takes place in the second or third week of February, and is one of the largest of its kind in the western Region. This five-day festival consists of mega-attractions as well as informal, technical & managerial events among numerous other competitions.</p>
+            </div>
+            <div class="col-xs-6">
+              <a href="http://svnit-sparsh.net"><img class="sparsh-logo-about" alt="Sparsh 2K16 - SVNIT" style="width: 280px; height: 253.6px; margin: 0 auto;" src="img/sparsh-logo.png"></a>
+            </div>
+          </div>
         </div>
     </section>
 
@@ -97,9 +193,19 @@
         <div class="download-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h2></h2>
-                    <p></p>
-                    <a href="" class="btn btn-default btn-lg"></a>
+                    <h2>Spread the Word About Sparsh</h2>
+                    <p>Want to invite your friends to Sparsh? Spread the word!</p>
+                    <ul class="list-inline banner-social-buttons">
+                        <li>
+                            <a href="#" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn btn-default btn-lg"><i class="fa fa-envelope fa-fw"></i></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -109,49 +215,63 @@
     <section id="contact" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact Start Bootstrap</h2>
-                <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
-                <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
-                </p>
+                <h2>Contact Us</h2>
+                <p>Feel free to provide some feedback on our events, give us suggestions for new ones, or to just say hello!</p>
+                <p>You can get in touch with us using the form below, through our Facebook page or just by dropping an email at <a href="mailto:example@svnit-sparsh.net">example@svnit-sparsh.net</a></p>
                 <ul class="list-inline banner-social-buttons">
                     <li>
-                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    <li>
-                        <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                        <a href="https://www.facebook.com/Sparsh.NITsurat" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Sparsh on Facebook</span></a>
                     </li>
                 </ul>
             </div>
         </div>
+        <div class="row container">
+          <div class="col-lg-8 col-lg-offset-2">
+            <div style="margin-top: 50px;" class="form-wrapper">
+              <form id="contactForm">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="Enter name here..">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email address</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter email address here..">
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea class="form-control" rows="3" placeholder="Your message here.."></textarea>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+              </form>
+  					</div>
+          </div>
+        </div>
     </section>
 
     <!-- Map Section -->
-    <div id="map"></div>
+
 
     <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p>Copyright &copy; Your Website 2014</p>
-        </div>
+    <footer class="footer-sparsh text-center">
+            <p><i class="fa fa-code"></i> with <i style="color: red;" class="fa fa-heart faa-pulse animated"></i> and a lot of <i class="fa fa-coffee"></i> at <a href="https://www.facebook.com/webdevlabs" target="_blank" title="WebDev Labs on facebook">WebDev Labs</a></p>
+            <p style="margin-top: 10px;">&copy; WebDev Labs 2015. All Rights Reserved.</p>
     </footer>
 
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- jQuery 1.11.1-->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="temp/bootstrap.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
 
     <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+    <script src="temp/jquery.easing.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script> -->
 
     <!-- Custom Theme JavaScript -->
     <script src="js/grayscale.js"></script>
+
+
 
 </body>
 

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Sparsh Form</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <style>
+
+  /**** General CSS ****/
+
+  body {
+    background-color: black;
+  }
+
+  input {
+    color: white;
+  }
+
+  textarea {
+    color: white;
+  }
+
+  /**** Contact Form CSS ****/
+
+  .form-contact .inputs-wrapper {
+    border: 2px solid white;
+    width: 400px;
+    margin: 0 auto;
+    border-radius: 25px;
+    margin-bottom: 24px;
+  }
+  .form-contact input:focus,
+  .form-contact textarea:focus {
+    outline: none;
+  }
+  .form-contact input,
+  .form-contact textarea {
+    background: none;
+    border: none;
+    box-shadow: none;
+    font-family: "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 100%;
+    padding: 16px;
+  }
+  .form-contact input::-moz-placeholder,
+  .form-contact textarea::-moz-placeholder {
+    color: white;
+    opacity: 1;
+  }
+  .form-contact input:-ms-input-placeholder,
+  .form-contact textarea:-ms-input-placeholder {
+    color: white;
+  }
+  .form-contact input::-webkit-input-placeholder,
+  .form-contact textarea::-webkit-input-placeholder {
+    color: white;
+  }
+  .form-contact input input::-webkit-input-placeholder,
+  .form-contact textarea input::-webkit-input-placeholder {
+    color: white;
+    font-size: 24px;
+    font-weight: 300;
+    position: relative;
+    top: 5px;
+  }
+  .form-contact input input:-moz-placeholder,
+  .form-contact textarea input:-moz-placeholder {
+    color: white;
+  }
+  .form-contact input textarea::-webkit-input-placeholder,
+  .form-contact textarea textarea::-webkit-input-placeholder {
+    color: white;
+  }
+  .form-contact input textarea:-moz-placeholder,
+  .form-contact textarea textarea:-moz-placeholder {
+    color: white;
+  }
+  .form-contact input {
+    border-bottom: 2px solid white;
+  }
+  .form-success,
+  .form-error {
+    width: 100%;
+    padding: 12px;
+    display: none;
+    margin-top: 12px;
+    color: #fff;
+  }
+  .form-success {
+    background-color: #58b551;
+  }
+  .form-error {
+    background-color: #d94947;
+  }
+  .field-error {
+    box-shadow: inset 0px 0px 10px -2px #ff0000 !important;
+  }
+  .form-loading {
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    height: 30px;
+    left: 50%;
+    margin: -15px 0 0 -15px;
+    opacity: 0;
+    margin: 0px auto;
+    top: 50%;
+    width: 30px;
+    -webkit-animation: pulsate 1s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: pulsate 1s ease-out;
+    -moz-animation-iteration-count: infinite;
+    animation: pulsate 1s ease-out;
+    animation-iteration-count: infinite;
+  }
+  input[type="submit"] {
+    -webkit-appearance: none;
+    background: none;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+    min-width: 155px;
+    border-radius: 25px;
+    display: inline-block;
+    padding: 14px 28px 13px 28px;
+    line-height: 1;
+    border: 2px solid #3498db;
+    color: #3498db;
+    max-width: 155px;
+    font-family: "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-left: 330px;
+  }
+
+  </style>
+</head>
+<body>
+
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+      <div style="margin-top: 50px;" class="form-wrapper clearfix">
+            <form class="form-contact email-form">
+              <div class="inputs-wrapper">
+                <input class="form-name validate-required" type="text" placeholder="Your Name" name="name">
+                <input class="form-email validate-required validate-email" type="text" name="email" placeholder="Your Email Address">
+                <textarea class="form-message validate-required" name="message" placeholder="Your Message"></textarea>
+              </div>
+              <input type="submit" class="send-form" value="Send Form">
+              <!-- Handle invalid inputs and incorrect fields -->
+              <div class="form-success">
+                <span class="text-white">Message sent - Thanks for your enquiry</span>
+              </div>
+              <div class="form-error">
+                <span class="text-white">Please complete all fields correctly</span>
+              </div>
+            </form>
+          </div>
+  </div>
+  </div>
+
+</body>

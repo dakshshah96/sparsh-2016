@@ -53,7 +53,7 @@
 		}
 		ctx.moveTo(this.x0 * 11 + mx, this.y0 * 11 + my);
 		ctx.arc(this.x0 * 11 + mx, this.y0 * 11 + my, 4, 0, Math.PI * 2);
-		
+
 	}
 	// paint globe
 	Point.prototype.globe = function () {
@@ -73,8 +73,8 @@
 		}
 	}
 	// set canvas
-	var canvas = {  
-		width:  0, 
+	var canvas = {
+		width:  0,
 		height: 0,
 		elem: document.createElement("canvas"),
 		resize: function () {
@@ -82,7 +82,7 @@
 			this.height = this.elem.height = this.elem.offsetHeight;
 			mx = (this.width * 0.5) -  (11 * 22);
 			my = (this.height * 0.5) - (11 * 11);
-		}	
+		}
 	}
 	var ctx = canvas.elem.getContext("2d");
 	document.body.appendChild(canvas.elem);
@@ -168,7 +168,7 @@
 			}
 		}
 	}
-	// start 
+	// start
 	canvas.resize();
 	pointer.x = canvas.width * 0.5;
 	pointer.y = canvas.height * 0.5;
@@ -224,6 +224,3 @@ var terminal = function() {
 }
 
 terminal();
-
-
-
