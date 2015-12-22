@@ -509,6 +509,10 @@ canvas {
   *zoom: 1; }
 
 /* Main */
+
+.flip-clock-label {
+  display: none;
+}
 .flip-clock-wrapper {
   font: normal 11px "Helvetica Neue", Helvetica, sans-serif;
   -webkit-user-select: none; }
@@ -683,11 +687,6 @@ canvas {
 
 .flip-clock-divider.seconds .flip-clock-label {
   right: -91px; }
-
-/* hide the hours, minutes, days label */
-.flip-clock-label {
-  display: none;
-}
 
 .flip-clock-dot.top {
   top: 30px; }
@@ -907,6 +906,24 @@ canvas {
 
   100% {
     opacity: 0; } }
+
+@media screen and (max-width: 980px) {
+      .clock-col {
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+@media screen and (max-width: 650px) {
+          .clock-col {
+            zoom: 0.7;
+          }
+        }
+
+@media screen and (max-width: 460px) {
+                  .clock-col {
+                    zoom: 0.5;
+                  }
+                }
 
 
 /***********************************
