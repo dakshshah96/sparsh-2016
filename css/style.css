@@ -337,6 +337,19 @@ canvas {
   display: none;
 }
 
+/**** Responsive Google Maps ****/
+
+#googleMap {
+        position: relative;
+        padding-bottom: 75%;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+        height: 0;
+        overflow: hidden;
+    }
+
 /**** Pulsating heart ****/
 
 @-webkit-keyframes pulse {

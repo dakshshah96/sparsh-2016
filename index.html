@@ -252,16 +252,17 @@ Changes to be made before uploading on GitHub
 
                     </div>
             </div>
-
-        <div class="row container">
-            <!--Embedding Google Map from Maps.js. Adjust size here-->
-            <div class="col-lg-8 col-lg-offset-2">
-                <div id="googleMap" style="width:800px;height:340px; margin-top:40px;"></div>
-            </div>
-        </div>
     </section>
 
     <!-- Map Section -->
+    <div class="container-fluid">
+      <div class="row">
+          <!--Embedding Google Map from Maps.js. Adjust size here-->
+          <div class="col-lg-8 col-lg-offset-2">
+              <div id="googleMap" style="width:800px;height:340px; margin-top:40px;"></div>
+          </div>
+      </div>
+    </div>
 
 
     <!-- Footer -->
@@ -284,9 +285,11 @@ Changes to be made before uploading on GitHub
     <!-- Custom Theme JavaScript -->
     <script src="js/grayscale.js"></script>
 
+    <!-- *********** ASYNCHRONOUS SCRIPTS (Load only after page load) *********** -->
+
     <!-- Google Maps -->
-    <script src="http://maps.googleapis.com/maps/api/js"></script>
-    <script src="js/Maps.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js" async></script>
+    <script src="js/Maps.js" async></script>
 
 
 
