@@ -452,7 +452,7 @@ canvas {
 /* Main */
 
 .flip-clock-label {
-  display: none;
+  color: #42dca3 !important;
 }
 .flip-clock-wrapper {
   font: normal 11px "Helvetica Neue", Helvetica, sans-serif;
@@ -571,10 +571,10 @@ canvas {
   z-index: 1;
   width: 100%;
   height: 200%;
-  color: #ccc;
+  color: #42dca3;
   text-shadow: 0 1px 2px #000;
   text-align: center;
-  background-color: #333;
+  background-color: black;
   border-radius: 6px;
   font-size: 70px; }
 
