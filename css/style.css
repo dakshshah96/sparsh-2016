@@ -337,12 +337,6 @@ canvas {
   display: none;
 }
 
-/**** Google Map Embed (Responsive) ****/
-
-.googleMaps {
-  margin-top: 50px;
-}
-
 /**** Pulsating heart ****/
 
 @-webkit-keyframes pulse {
