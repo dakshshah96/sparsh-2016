@@ -28,6 +28,7 @@ Changes to be made before uploading on GitHub
 1. Change temp CSS files to CDN commented code
 
 
+
 -->
 
 
@@ -87,6 +88,86 @@ Changes to be made before uploading on GitHub
       };
     </script>
 
+    <script>
+
+
+        /** Document Ready Functions **/
+    /********************************************************************/
+
+    $( document ).ready(function() {
+
+      // Resive video
+      scaleVideoContainer();
+
+      initBannerVideoSize('.video-container .poster img');
+      initBannerVideoSize('.video-container .filter');
+      initBannerVideoSize('.video-container video');
+
+      $(window).on('resize', function() {
+          scaleVideoContainer();
+          scaleBannerVideoSize('.video-container .poster img');
+          scaleBannerVideoSize('.video-container .filter');
+          scaleBannerVideoSize('.video-container video');
+      });
+
+    });
+
+    /** Reusable Functions **/
+    /********************************************************************/
+
+    function scaleVideoContainer() {
+
+      var height = $(window).height();
+      var unitHeight = parseInt(height) + 'px';
+      $('.homepage-hero-module').css('height',unitHeight);
+
+    }
+
+    function initBannerVideoSize(element){
+
+      $(element).each(function(){
+          $(this).data('height', $(this).height());
+          $(this).data('width', $(this).width());
+      });
+
+      scaleBannerVideoSize(element);
+
+    }
+
+    function scaleBannerVideoSize(element){
+
+      var windowWidth = $(window).width(),
+          windowHeight = $(window).height(),
+          videoWidth,
+          videoHeight;
+
+      console.log(windowHeight);
+
+      $(element).each(function(){
+          var videoAspectRatio = $(this).data('height')/$(this).data('width'),
+              windowAspectRatio = windowHeight/windowWidth;
+
+          if (videoAspectRatio > windowAspectRatio) {
+              videoWidth = windowWidth;
+              videoHeight = videoWidth * videoAspectRatio;
+              $(this).css({'top' : -(videoHeight - windowHeight) / 2 + 'px', 'margin-left' : 0});
+          } else {
+              videoHeight = windowHeight;
+              videoWidth = videoHeight / videoAspectRatio;
+              $(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
+          }
+
+          $(this).width(videoWidth).height(videoHeight);
+
+          $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
+
+
+      });
+    }
+
+
+    </script>
+
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -126,25 +207,28 @@ Changes to be made before uploading on GitHub
         <!-- /.container -->
     </nav>
 
-    <!-- Intro Header -->
-
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <a href="http://svnit-sparsh.net"><img alt="Sparsh 2K16 - SVNIT" class="img-responsive" style="width: 350px; height: 317px; margin: 0 auto;" src="img/sparsh-logo.png"></a>
-                        <p class="intro-text">Sparsh is SVNIT's annual techno-cultural fest and the largest of its kind in Gujarat.</p>
-                    </div>
-                </div>
-                <div class="row">
-                  <div class="col-xs-8 col-xs-offset-3 clock-col">
-                    <div style="margin: 2em 0 2em 0;" class="clock"></div>
-                  </div>
-                </div>
-            </div>
-        </div>
-    </header>
+      <!-- Intro Header -->
+      <div class="homepage-hero-module">
+      <div class="video-container">
+      <div class="title-container">
+          <div class="headline">
+            <a href="http://svnit-sparsh.net"><img alt="Sparsh 2K16 - SVNIT" class="img-responsive" style="width: 35%; height: 35%; margin: 0 auto;" src="img/sparsh-logo.png"></a>
+          </div>
+          <div class="description">
+            <a href="#about" class="btn btn-circle page-scroll">
+                <i class="fa fa-angle-double-down animated"></i>
+            </a>
+          </div>
+      </div>
+      <div class="filter"></div>
+      <iframe frameborder="0" height="100%" width="100%"
+          src="https://youtube.com/embed/9pWL99j_uCo?modestbranding=1&loop=1&playlist=9pWL99j_uCo&autoplay=1&controls=0&showinfo=0&autohide=1">
+        </iframe>
+      <div class="poster hidden">
+          <img src="http://www.videojs.com/img/poster.jpg" alt="">
+      </div>
+      </div>
+      </div>
 
     <!-- JavaScript to manage the countdown timer -->
     <script type="text/javascript">
@@ -246,6 +330,7 @@ Changes to be made before uploading on GitHub
 
     <!-- Bootstrap Core JavaScript -->
     <script src="temp/bootstrap.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
 
     <!-- *********** ASYNCHRONOUS SCRIPTS (Load only after page load) *********** -->
 
