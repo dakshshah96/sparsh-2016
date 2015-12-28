@@ -930,7 +930,7 @@ canvas {
                 .video-container .title-container {
                   z-index: 1000;
                   position: absolute;
-                  top: 15%;
+                  top: 5%;
                   width: 100%;
                   text-align: center;
                   color: #fff;
