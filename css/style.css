@@ -272,6 +272,10 @@ body {
 
 @media(max-width:767px) {
 
+  .quote {
+    font-size: 20px !important;
+  }
+
     .madeWithLove {
       display: block;
       float: none;
@@ -355,6 +359,23 @@ body {
 ************************************/
 
 /**** Other CSS ****/
+
+.quote {
+  font-family: 'Abril Fatface','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: 36px;
+}
+
+.quote-section {
+    width: 100%;
+    padding: 50px 0;
+    color: #fff;
+    background: url(../img/quote-bg.jpg) no-repeat center center scroll;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
 
 canvas {
 	position:absolute;
