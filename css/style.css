@@ -310,7 +310,7 @@ body {
 .btn-circle {
     width: 70px;
     height: 70px;
-    margin-top: 15px;
+    margin-top: 70px;
     padding: 7px 16px;
     border: 2px solid #fff;
     border-radius: 100%!important;
@@ -490,7 +490,9 @@ canvas {
 }
 .flip-clock-wrapper {
   font: normal 11px "Helvetica Neue", Helvetica, sans-serif;
-  -webkit-user-select: none; }
+  -webkit-user-select: none;
+  text-align: center;
+position: relative;}
 
 .flip-clock-meridium {
   background: none !important;
@@ -502,8 +504,9 @@ canvas {
 .flip-clock-wrapper {
   text-align: center;
   position: relative;
-  width: 100%;
-  margin: 1em;
+  width: 620px;
+
+  margin: 0 auto;
 }
 
 .flip-clock-wrapper:before,
