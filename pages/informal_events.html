@@ -79,7 +79,8 @@
       $(document).ready(function() {
         $("#wordcloud").jQCloud(word_list, {
   width: 1000,
-  height: 400
+  height: 400,
+  autoResize: true
 });
       });
     </script>
@@ -92,7 +93,7 @@
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+    background: url(../img/pages/bg/informal-bg.png) no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -102,6 +103,9 @@
 
 ul li{
         font-size: 20px;
+     }
+     #wordcloud {
+       width: 100% !important;
      }
 </style>
 </head>
@@ -133,7 +137,7 @@ ul li{
                     <li>
                         <a class="page-scroll" href="#events">Events</a>
                     </li>
-                    
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -147,13 +151,13 @@ ul li{
         <div class="intro-body">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-8 col-md-offset-2" style="margin-top:250px;">
-                        <blockquote class="fa fa-2x fa-quote-left">These mini events trigger the hyperactive element in people and keep the streets rustling with activity. Events like one minute games are totally apt to while away time as people wait for their friends or just want to spend some quality time doing fun stuff.
-                        <div class="fa fa-quote-right"></div>
-                        </blockquote>
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2 class="brand-heading">Informal Events</h2>
+                        <a href="#events" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
                     </div>
                 </div>
-                
             </div>
         </div>
     </header>
@@ -163,15 +167,14 @@ ul li{
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Events</h2>
+                <p>These mini events trigger the hyperactive element in people and keep the streets rustling with activity. Events like one minute games are totally apt to while away time as people wait for their friends or just want to spend some quality time doing fun stuff.</p>
             </div>
-              
-                <div id="wordcloud" class="jqcloud" style="width: 600px; height: 370px;"></div>
-                
-            </div>
-          </div>
+        </div>
+
+                <div id="wordcloud" class="jqcloud"></div>
     </section>
 
-    
+
 
     <!-- Footer -->
     <footer class="footer-sparsh text-center">
