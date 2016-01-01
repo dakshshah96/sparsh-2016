@@ -6,13 +6,15 @@
  * Customized by WebDev Team, SVNIT.
  */
 
+
+
 body {
     width: 100%;
     height: 100%;
-    font-family: 'Roboto','Helvetica Neue',Helvetica,Arial,sans-serif !important;
+    font-family: 'Montserrat', sans-serif important;
     font-weight: 300;
-    color: #fff;
-    background-color: #000;
+    background-color:#fff;
+    background-image: url(http://api.thumbr.it/whitenoise-1920x1080.png?background=efede100&noise=626262&density=15&opacity=15);
 }
 
 html {
@@ -28,7 +30,7 @@ h5,
 h6 {
     margin: 0 0 35px;
     text-transform: uppercase;
-    font-family: 'Roboto','Helvetica Neue',Helvetica,Arial,sans-serif !important;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
 }
@@ -37,19 +39,38 @@ p {
     margin: 0 0 25px;
     font-size: 18px;
     line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
 }
 
 a {
-    color: #42dca3;
+    color: #22a7f0;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 }
 
-a:hover,
+/* unvisited link */
+a:link {
+    color: #f9b817;
+}
+
+/* visited link */
+a:visited {
+    color: #f9b817;
+}
+
+a:hover {
+  text-decoration: none;
+    color: #005777;
+}
+
 a:focus {
     text-decoration: none;
-    color: #1670a2;
+    color: #f9b817;
+}
+
+a:active{
+   color: #005777;
 }
 
 .light {
@@ -58,10 +79,9 @@ a:focus {
 
 .navbar-custom {
     margin-bottom: 0;
-    border-bottom: 1px solid rgba(255,255,255,.3);
     text-transform: uppercase;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-color: #000;
+    background-color: #775033 important;
 }
 
 .navbar-custom .navbar-brand {
@@ -84,7 +104,8 @@ a:focus {
 }
 
 .navbar-custom a {
-    color: #fff;
+    color: #F9B817;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .navbar-custom .nav li a {
@@ -110,7 +131,8 @@ a:focus {
 }
 
 .navbar-custom .nav li.active a {
-    background-color: rgba(255,255,255,.3);
+    color:#F9B817;
+    background-color: #775033;
 }
 
 .navbar-custom .nav li.active a:hover {
@@ -124,8 +146,7 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(../img/pages/bg/intro-bg-old.png) no-repeat bottom center scroll;
-    background-color: #000;
+
 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -158,13 +179,17 @@ a:focus {
     width: 100%;
     padding: 50px 0;
     color: #fff;
-    background: url(../img/spread-bg.png) no-repeat center center scroll;
-    background-color: #000;
+    background: url(../img/bg/spread-bg.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
+
+
 
 .btn {
     border-radius: 0;
@@ -177,17 +202,17 @@ a:focus {
 }
 
 .btn-default {
-    border: 1px solid #42dca3;
-    color: #42dca3;
+    border: 1px solid #0E979F;
+    color: #0E979F;
     background-color: transparent;
 }
 
 .btn-default:hover,
 .btn-default:focus {
-    border: 1px solid #42dca3;
+    border: 1px solid #0E979F;
     outline: 0;
-    color: #000;
-    background-color: #42dca3;
+    color: #F9B817;
+    background-color: #0E979F;
 }
 
 ul.banner-social-buttons {
@@ -205,14 +230,14 @@ footer p {
 
 ::-moz-selection {
     text-shadow: none;
-    background: #fcfcfc;
-    background: rgba(255,255,255,.2);
+    background: #3c3c3c;
+    color: white;
 }
 
 ::selection {
     text-shadow: none;
-    background: #fcfcfc;
-    background: rgba(255,255,255,.2);
+    background: #3c3c3c;
+    color: white;
 }
 
 img::selection {
@@ -247,8 +272,7 @@ body {
 
     .navbar-custom.top-nav-collapse {
         padding: 0;
-        border-bottom: 1px solid rgba(255,255,255,.3);
-        background: #000;
+        background: #0E979F;
     }
 
     .intro {
@@ -369,22 +393,35 @@ body {
 .quote-section {
     width: 100%;
     padding: 50px 0;
-    color: #fff;
-    background: url(../img/quote-bg.jpg) no-repeat center center scroll;
-    background-color: #000;
+    color: #000;
+    background: url(../img/bg/quote1.png) no-repeat center center scroll;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
 
-canvas {
-	position:absolute;
-	width:100%;
-	height:100%;
-	background: #000;
-	cursor: pointer;
+.quote-section-2 {
+    width: 100%;
+    padding: 50px 0;
+    color: #fff;
+    background: url(../img/bg/quote2.png) no-repeat center center scroll;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
+
+.tile:hover{
+  background-color:#0E979F;
+
+}
+
+
 #link {
 	position:absolute;
 	left: 1em;
@@ -397,7 +434,9 @@ canvas {
 }
 .footer-sparsh {
   margin-top: 70px;
-  border-top: solid white;
+  border-top: solid black;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 #contactForm {
   font-family: 'Roboto','Helvetica Neue',Helvetica,Arial,sans-serif;
@@ -630,10 +669,10 @@ position: relative;}
   z-index: 1;
   width: 100%;
   height: 200%;
-  color: #fff;
+  color: #F9B817;
   text-shadow: 0 1px 2px #ffff;
   text-align: center;
-  background-color: #060606;
+  background-color: #0E979F;
   border-radius: 6px;
   font-size: 70px; }
 
@@ -919,72 +958,7 @@ position: relative;}
                   }
                 }
 
-                .homepage-hero-module {
-                  border-right: none;
-                  border-left: none;
-                  position: relative;
-                }
-                .no-video .video-container video,
-                .touch .video-container video {
-                  display: none;
-                }
-                .no-video .video-container .poster,
-                .touch .video-container .poster {
-                  display: block !important;
-                }
-                .video-container {
-                  position: relative;
-                  bottom: 0%;
-                  left: 0%;
-                  height: 100%;
-                  width: 100%;
-                  overflow: hidden;
-                  background: #000;
-                }
-                .video-container .poster img {
-                  width: 100%;
-                  bottom: 0;
-                  position: absolute;
-                }
-                .video-container .filter {
-                  z-index: 100;
-                  position: absolute;
-                  background: rgba(0, 0, 0, 0.4);
-                  width: 100%;
-                }
-                .video-container .title-container {
-                  z-index: 1000;
-                  position: absolute;
-                  top: 5%;
-                  width: 100%;
-                  text-align: center;
-                  color: #fff;
-                }
-                .video-container .description .inner {
-                  font-size: 1em;
-                  width: 45%;
-                  margin: 0 auto;
-                }
-                .video-container .link {
-                  position: absolute;
-                  bottom: 3em;
-                  width: 100%;
-                  text-align: center;
-                  z-index: 1001;
-                  font-size: 2em;
-                  color: #fff;
-                }
-                .video-container .link a {
-                  color: #fff;
-                }
-                .video-container video {
-                  position: absolute;
-                  z-index: 0;
-                  bottom: 0;
-                }
-                .video-container video.fillWidth {
-                  width: 100%;
-                }
+
 
 
 article {

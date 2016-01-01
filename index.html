@@ -23,17 +23,27 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
 
-    <!-- Font Awesome CSS -->
+    <!-- Font Awesome CSS CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css">
+
+    <!-- Animate.css CDN -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.0/animate.min.css">
+
+    <!-- WOW JavaScript -->
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    <script type="text/javascript">new WOW().init();</script>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
     <!-- Theme & Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
 
     <!-- jQuery 1.11.1 (Compatible with countdown timer - DO NOT change order of scripts) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- EDGE JS -->
+    <script type="text/javascript" charset="utf-8" src="js/edge.5.0.0.min.js"></script>
 
     <!-- Flip Clock JavaScript -->
     <script src="js/flipclock-custom.min.js"></script>
@@ -43,93 +53,26 @@
     <script>
       WebFontConfig = {
         google: {
-        families: ['Roboto:regular,bold,light:latin', 'Abril Fatface:regular']
+        families: ['Roboto:regular,bold,light:latin', 'Abril Fatface:regular', 'Montserrat:700']
         }
       };
     </script>
 
+    <!-- EDGE style -->
+    <style>
+        .edgeLoad-EDGE-1962980 { visibility:hidden; }
+    </style>
+
+    <!-- EDGE script -->
     <script>
-      !function(a){var b=/iPhone/i,c=/iPod/i,d=/iPad/i,e=/(?=.*\bAndroid\b)(?=.*\bMobile\b)/i,f=/Android/i,g=/(?=.*\bAndroid\b)(?=.*\bSD4930UR\b)/i,h=/(?=.*\bAndroid\b)(?=.*\b(?:KFOT|KFTT|KFJWI|KFJWA|KFSOWI|KFTHWI|KFTHWA|KFAPWI|KFAPWA|KFARWI|KFASWI|KFSAWI|KFSAWA)\b)/i,i=/IEMobile/i,j=/(?=.*\bWindows\b)(?=.*\bARM\b)/i,k=/BlackBerry/i,l=/BB10/i,m=/Opera Mini/i,n=/(CriOS|Chrome)(?=.*\bMobile\b)/i,o=/(?=.*\bFirefox\b)(?=.*\bMobile\b)/i,p=new RegExp("(?:Nexus 7|BNTV250|Kindle Fire|Silk|GT-P1000)","i"),q=function(a,b){return a.test(b)},r=function(a){var r=a||navigator.userAgent,s=r.split("[FBAN");return"undefined"!=typeof s[1]&&(r=s[0]),this.apple={phone:q(b,r),ipod:q(c,r),tablet:!q(b,r)&&q(d,r),device:q(b,r)||q(c,r)||q(d,r)},this.amazon={phone:q(g,r),tablet:!q(g,r)&&q(h,r),device:q(g,r)||q(h,r)},this.android={phone:q(g,r)||q(e,r),tablet:!q(g,r)&&!q(e,r)&&(q(h,r)||q(f,r)),device:q(g,r)||q(h,r)||q(e,r)||q(f,r)},this.windows={phone:q(i,r),tablet:q(j,r),device:q(i,r)||q(j,r)},this.other={blackberry:q(k,r),blackberry10:q(l,r),opera:q(m,r),firefox:q(o,r),chrome:q(n,r),device:q(k,r)||q(l,r)||q(m,r)||q(o,r)||q(n,r)},this.seven_inch=q(p,r),this.any=this.apple.device||this.android.device||this.windows.device||this.other.device||this.seven_inch,this.phone=this.apple.phone||this.android.phone||this.windows.phone,this.tablet=this.apple.tablet||this.android.tablet||this.windows.tablet,"undefined"==typeof window?this:void 0},s=function(){var a=new r;return a.Class=r,a};"undefined"!=typeof module&&module.exports&&"undefined"==typeof window?module.exports=r:"undefined"!=typeof module&&module.exports&&"undefined"!=typeof window?module.exports=s():"function"==typeof define&&define.amd?define("isMobile",[],a.isMobile=s()):a.isMobile=s()}(this);
-    </script>
-
-    <script>
-
-    /********************************************************************/
-    /** VIDEO BACKGROUND JAVASCRIPT
-    /********************************************************************/
-
-        $( document ).ready(function() {
-
-          if (isMobile.any) {
-            $('#bg-video').remove();
-          }
-
-          // Resize video
-          scaleVideoContainer();
-
-          initBannerVideoSize('.video-container .poster img');
-          initBannerVideoSize('.video-container .filter');
-          initBannerVideoSize('.video-container video');
-
-          $(window).on('resize', function() {
-              scaleVideoContainer();
-              scaleBannerVideoSize('.video-container .poster img');
-              scaleBannerVideoSize('.video-container .filter');
-              scaleBannerVideoSize('.video-container video');
-          });
-
-        });
-
-        function scaleVideoContainer() {
-
-          var height = $(window).height();
-          var unitHeight = parseInt(height) + 'px';
-          $('.homepage-hero-module').css('height',unitHeight);
-
-        }
-
-        function initBannerVideoSize(element){
-
-          $(element).each(function(){
-              $(this).data('height', $(this).height());
-              $(this).data('width', $(this).width());
-          });
-
-          scaleBannerVideoSize(element);
-
-        }
-
-        function scaleBannerVideoSize(element){
-
-          var windowWidth = $(window).width(),
-              windowHeight = $(window).height(),
-              videoWidth,
-              videoHeight;
-
-          console.log(windowHeight);
-
-          $(element).each(function(){
-              var videoAspectRatio = $(this).data('height')/$(this).data('width'),
-                  windowAspectRatio = windowHeight/windowWidth;
-
-              if (videoAspectRatio > windowAspectRatio) {
-                  videoWidth = windowWidth;
-                  videoHeight = videoWidth * videoAspectRatio;
-                  $(this).css({'top' : -(videoHeight - windowHeight) / 2 + 'px', 'margin-left' : 0});
-              } else {
-                  videoHeight = windowHeight;
-                  videoWidth = videoHeight / videoAspectRatio;
-                  $(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
-              }
-
-              $(this).width(videoWidth).height(videoHeight);
-
-              $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
-
-
-          });
-        }
-
+       AdobeEdge.loadComposition('colourfulworld', 'EDGE-1962980', {
+        scaleToFit: "width",
+        centerStage: "none",
+        minW: "0",
+        maxW: "undefined",
+        width: "1920px",
+        height: "1080px"
+    }, {dom: [ ]}, {dom: [ ]});
     </script>
 
 </head>
@@ -165,7 +108,7 @@
                         <a class="page-scroll" href="#events">Events</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#sponsors">Sponsors</a>
+                        <a class="page-scroll" href="#committee">Committee</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
@@ -178,30 +121,13 @@
     </nav>
 
       <!-- Intro Header -->
-      <div style="margin: 0;" class="homepage-hero-module">
-      <div class="video-container">
+
+      <div id="Stage" class="EDGE-1962980">
+      </div>
       <div class="title-container">
-          <div class="headline">
-            <a href="http://svnit-sparsh.net"><img alt="Sparsh 2K16 - SVNIT" class="img-responsive" style="width: 310.797; height: 281px; margin: 0 auto; display: block;" src="img/sparsh-logo.png"></a>
-          </div>
           <div class="description">
-            <div style="margin-top: 20px;" class="clock clock-col"></div>
-            <a href="#about" class="btn btn-circle page-scroll">
-                <i class="fa fa-angle-double-down animated"></i>
-            </a>
+            <div style="margin-top: -100px;" class="clock clock-col"></div>
           </div>
-      </div>
-      <div class="filter"></div>
-      <video id="bg-video" autoplay loop class="fillWidth" muted>
-        <source src="img/video/backgroundVideo.mp4" type="video/mp4"/>
-        <source src="img/video/backgroundVideo.ogg" type="video/ogg"/>
-        <source src="img/video/backgroundVideo.webm" type="video/webm"/>
-        Your browser does not support the video tag. I suggest you upgrade your browser.
-      </video>
-      <div class="poster hidden">
-          <img src="img/intro-bg-old.png">
-      </div>
-      </div>
       </div>
 
     <!-- JavaScript to manage the countdown timer -->
@@ -213,7 +139,7 @@
 				// Grab the current date
 				var currentDate = new Date();
 
-				// Set some date in the future. In this case, it's always Jan 1
+				// Set some date in the future. In this case, it's February 20, 2016
 				var futureDate  = new Date("2016-02-20");
 
 				// Calculate the difference in seconds between the future and current date
@@ -232,13 +158,13 @@
     <!-- About Section -->
     <section id="about" class="container content-section text-center">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>About Sparsh</h2>
+            <div class="col-lg-8 col-lg-offset-2 wow slideInUp">
+                <h2 style="color:#775033">About Sparsh</h2>
             </div>
           </div>
           <div style="margin-top: 50px;" class="row">
             <div class="col-xs-6 sparsh-info-about">
-                <p>Sparsh is the annual techno-cultural festival of Sardar Vallabhbhai National Institute of Technology. It usually takes place in the second or third week of February, and is one of the largest of its kind in the western Region. This five-day festival consists of mega-attractions as well as informal, technical & managerial events among numerous other competitions.</p>
+                <p style="font-family: 'Montserrat', sans-serif;">Sparsh is the annual techno-cultural festival of Sardar Vallabhbhai National Institute of Technology. It usually takes place in the second or third week of February, and is one of the largest of its kind in the western Region. This five-day festival consists of mega-attractions as well as informal, technical & managerial events among numerous other competitions.</p>
             </div>
             <div class="col-xs-6">
               <a href="http://svnit-sparsh.net"><img class="sparsh-logo-about" alt="Sparsh 2K16 - SVNIT" style="width: 280px; height: 253.6px; margin: 0 auto;" src="img/sparsh-logo.png"></a>
@@ -252,7 +178,7 @@
         <div class="quote-section">
             <div class="container">
                 <div class="col-lg-12">
-                    <p class="quote"><i style="margin-right: 20px;" class="fa fa-2x fa-quote-left"></i>Alone we can do so little; together we can do so much</p>
+                    <p class="quote"><i style="margin-right: 20px;" class="fa fa-2x fa-quote-left"></i>Not all those who wander are lost</p>
                 </div>
             </div>
         </div>
@@ -260,67 +186,96 @@
 
 
     <!-- Events Section -->
-    <section id="events" class="container content-section text-center">
+    <section id="events" style="a:hover {color: #fff;}" class="container content-section text-center">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Events at Sparsh 2K16</h2>
+            <div class="col-lg-8 col-lg-offset-2 wow slideInUp">
+                <h2 style="color:#775033">Events at Sparsh 2K16</h2>
             </div>
           </div>
           <div style="margin-top: 50px;" class="row">
-            <div class="col-md-4">
-               <a href="pages/informal_events.html">
-                <i class="fa fa-5x fa-fort-awesome"></i>
+            <a href="pages/informal_events.html">
+              <div class="col-md-4 tile wow slideInLeft" >
+                <i  style = "padding:20px;" class="fa fa-5x fa-fort-awesome"></i>
                 <p>Informal Events</p>
-               </a>
-            </div>
-            <div class="col-md-4">
-                <a href="pages/technical_events.html">
-                 <i class="fa fa-5x fa-cogs"></i>
-                 <p>Technical Events</p>
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="pages/managerial_events.html">
-                 <i class="fa fa-5x fa-area-chart"></i>
-                 <p>Managerial Events</p>
-                </a>
-            </div>
+              </div>
+            </a>
+            <a href="pages/technical_events.html">
+              <div class="col-md-4 tile wow slideInUp">
+                <i style = "padding:20px;" class="fa fa-5x fa-cogs"></i>
+                <p>Technical Events</p>
+              </div>
+            </a>
+            <a href="pages/managerial_events.html">
+              <div class="col-md-4 tile wow slideInRight">
+                <i style = "padding:20px;" class="fa fa-5x fa-area-chart"></i>
+                <p>Managerial Events</p>
+              </div>
+            </a>
           </div>
+
           <div style="margin-top: 50px;" class="row">
-            <div class="col-md-4">
-              <a href="pages/night_events.html">
-                <i class="fa fa-5x fa-music"></i>
+            <a href="pages/night_events.html">
+              <div class="col-md-4 tile wow slideInLeft">
+                <i style = "padding:20px;" class="fa fa-5x fa-music "></i>
                 <p>Night Events</p>
-              </a>
-            </div>
-            <div class="col-md-4">
-              <a href="pages/social_causes.html">
-                <i class="fa fa-5x fa-smile-o"></i>
+              </div>
+            </a>
+            <a href="pages/social_causes.html">
+              <div class="col-md-4 tile wow slideInUp">
+                <i style = "padding:20px;" class="fa fa-5x fa-smile-o"></i>
                 <p>Social Causes</p>
-              </a>
-            </div>
-            <div class="col-md-4">
-              <a href="pages/mega_attractions.html">
-                <i class="fa fa-5x fa-flag-checkered"></i>
+              </div>
+            </a>
+            <a href="pages/mega_attractions.html">
+              <div class="col-md-4 tile wow slideInRight">
+                <i style = "padding:20px;" class="fa fa-5x fa-flag-checkered"></i>
                 <p>Mega Attractions</p>
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
           <div style="margin-top: 50px;" class="row">
-            <div class="col-md-6">
-              <a href="pages/lecture_events.html">
-                <i class="fa fa-5x fa-graduation-cap"></i>
+            <a href="pages/lecture_events.html">
+              <div class="col-md-6 tile wow slideInLeft">
+                <i style="padding:20px;" class="fa fa-5x fa-graduation-cap"></i>
                 <p>Lectures</p>
-              </a>
             </div>
-            <div class="col-md-6">
-              <a href="pages/workshop_events.html">
-                <i class="fa fa-5x fa-flask"></i>
+            </a>
+            <a href="pages/workshop_events.html">
+              <div class="col-md-6 tile wow slideInRight">
+                <i style="padding:20px;" class="fa fa-5x fa-flask"></i>
                 <p>Workshops & Exhibitions</p>
-              </a>
             </div>
+            </a>
+
           </div>
+        </div>
     </section>
+
+    <!-- Quote Section -->
+    <section id="quote" class="content-section text-center">
+        <div class="quote-section-2">
+            <div class="container">
+                <div class="col-lg-12">
+                    <p class="quote"><i style="margin-right: 20px;" class="fa fa-2x fa-quote-left"></i>Don't be a tourist, be a traveller!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsor Section -->
+    <section id = "sponsers" class="container content-section text-center">
+      <div class="row">
+        <h2 style="color:#775033" class="wow slideInUp">Our Previous Sponsers</h2>
+      </div>
+
+      <div class = "row">
+        <div class="col-md-6 wow slideInLeft"><img  style = "padding:20px;" class="img-responsive" src="img/sponsors/sponsors1.png"></div>
+        <div class="col-md-6 wow slideInRight"><img style = "padding:20px;" class="img-responsive" src="img/sponsors/sponsors2.png"></div>
+      </div>
+
+    </section>
+
+
 
 
     <!-- Download Section -->
@@ -332,13 +287,13 @@
                     <p>Want to invite your friends to Sparsh? Spread the word!</p>
                     <ul class="list-inline banner-social-buttons">
                         <li>
-                            <a href="https://www.facebook.com/dialog/feed?app_id=134530986736267&link=http%3A%2F%2Fwww.svnit-sparsh.net&description=Hey%2C+Gujarat%27s+biggest+techno-cultural+fest+is+just+around+the+corner.+Visit+svnit-sparsh.net+now%21+%23Sparsh2k16&redirect_uri=http://facebook.com/" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i></a>
+                            <a href="https://www.facebook.com/dialog/feed?app_id=134530986736267&link=http%3A%2F%2Fwww.svnit-sparsh.net&description=Hey%2C+Gujarat%27s+biggest+techno-cultural+fest+is+just+around+the+corner.+Visit+svnit-sparsh.net+now%21+%23Sparsh2k16&redirect_uri=http://facebook.com/" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw wow bounceIn" data-wow-delay=".1s"></i></a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/intent/tweet?original_referer=http://svnit-sparsh.net/&source=tweetbutton&text=Hey,%20Gujarat's%20biggest%20techno-cultural%20is%20just%20around%20the%20corner.%20%23Sparsh2k16&url=http://svnit-sparsh.net/&via=Sparsh_SVNIT" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i></a>
+                            <a href="https://twitter.com/intent/tweet?original_referer=http://svnit-sparsh.net/&source=tweetbutton&text=Hey,%20Gujarat's%20biggest%20techno-cultural%20is%20just%20around%20the%20corner.%20%23Sparsh2k16&url=http://svnit-sparsh.net/&via=Sparsh_SVNIT" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw wow bounceIn" data-wow-delay=".1s"></i></a>
                         </li>
                         <li>
-                            <a href="mailto:?subject=Sparsh%202k16&body=Hey%2C%20Gujarat%27s%20biggest%20techno-cultural%20is%20just%20around%20the%20corner.%20Visit%20svnit-sparsh.net%20now%21%20" class="btn btn-default btn-lg"><i class="fa fa-envelope fa-fw"></i></a>
+                            <a href="mailto:?subject=Sparsh%202k16&body=Hey%2C%20Gujarat%27s%20biggest%20techno-cultural%20is%20just%20around%20the%20corner.%20Visit%20svnit-sparsh.net%20now%21%20" class="btn btn-default btn-lg"><i class="fa fa-envelope fa-fw wow bounceIn" data-wow-delay=".1s"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -346,46 +301,18 @@
         </div>
     </section>
 
-    <!-- Sponsor Section -->
-    <section id="sponsors"  style="border-bottom: 5px solid white; padding-bottom: 100px;" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Our Previous Sponsors</h2>
-            </div>
-        </div>
-        <div class="row" style="margin-top:20px;">
-            <div class="col-md-4">
-                <img src="img/sponsors/old/1.png"/>
-            </div>
-            <div class="col-md-4">
-                <img src="img/sponsors/old/2.png"/>
-            </div>
-            <div class="col-md-4">
-                <img src="img/sponsors/old/3.png"/>
-            </div>
-        </div>
-        <div class="row" style="margin-top:10px;">
-            <div class="col-md-4">
-                <img src="img/sponsors/old/4.png"/>
-            </div>
-            <div class="col-md-4">
-                <img src="img/sponsors/old/5.png"/>
-            </div>
-            <div class="col-md-4">
-                <img src="img/sponsors/old/6.png"/>
-            </div>
-        </div>
-        <div class="row" style="margin-top:40px;">
-            <div class="col-md-4">
-                <img src="img/sponsors/old/7.png"/>
-            </div>
-            <div class="col-md-4">
-                <img src="img/sponsors/old/8.png"/>
-            </div>
-            <div class="col-md-4">
-                <img src="img/sponsors/old/9.png"/>
-            </div>
-        </div>
+
+
+            <section id = "committee" class="container content-section text-center">
+      <div class="row">
+
+      </div>
+
+      <div class = "row">
+        <div class="col-md-6 wow slideInLeft"><img  style = "padding:20px;" class="img-responsive" src="img/committee/committee1.png"></div>
+        <div class="col-md-6 wow slideInRight"><img style = "padding:20px;" class="img-responsive" src="img/committee/committee2.png"></div>
+      </div>
+
     </section>
 
     <!-- Contact Section -->
@@ -409,20 +336,27 @@
                <div class="typeform-widget" data-url="https://daksh2.typeform.com/to/Vlak4x" data-text="Basic Contact Form" style="width:100%;height:340px;"></div>
                <script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'widget.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()</script>
             </div>
+
+
+
+
             <div class="col-lg-8 col-lg-offset-2" style="margin-top: 50px;">
               <iframe width="100%" height="300" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCz8rjo-ZHL9xrmy7CNpLimwnZsZUT-K9U&q=Sardar+Vallabhbhai+National+Institute+of+Technology,Ichchhanath,+Surat,+Gujarat" allowfullscreen></iframe>
             </div>
         </div>
     </section>
 
+
+
     <!-- Footer -->
     <footer class="footer-sparsh text-center">
             <p><i class="fa fa-code"></i> with <i style="color: red;" class="fa fa-heart faa-pulse animated"></i> and a lot of <i class="fa fa-coffee"></i> by the WebDev Committee</p>
-            <p style="margin-top: 5px;">&copy; WebDev Committee 2015. All Rights Reserved.</p>
+            <p style="margin-top: 5px;">&copy; WebDev Committee 2016. All Rights Reserved.</p>
     </footer>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
 
     <!-- *********** ASYNCHRONOUS SCRIPTS (Load only after page load) *********** -->
 
