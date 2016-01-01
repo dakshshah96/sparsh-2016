@@ -31,17 +31,27 @@
     <!-- Theme & Custom CSS -->
     <link rel="stylesheet" href="../css/style.css">
 
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="../css/chocolat.css">
+
     <!-- jQuery 1.11.1 (Compatible with countdown timer - DO NOT change order of scripts) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Lightbox JS -->
+    <script src="../js/jquery.chocolat.js"></script>
 
     <!-- Google Webfont Loader -->
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js" async></script>
     <script>
-      WebFontConfig = {
-        google: {
-        families: ['Roboto:regular,bold,light:latin']
-        }
-      };
+    $(document).ready(function(){
+  $('.chocolat-parent').Chocolat();
+});
+
+  WebFontConfig = {
+    google: {
+    families: ['Roboto:regular,bold,light:latin','Montserrat:regular']
+    }
+  };
     </script>
 
 <script type="text/javascript" src="../js/jqcloud.min.js"></script>
@@ -165,7 +175,78 @@ ul li{
             </div>
         </div>
 
-                <div id="wordcloud" class="jqcloud"></div>
+        <div id="wordcloud" class="jqcloud"></div>
+
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+            <h2 style="text-align:center;">Photo Gallery</h2>
+            <p style="font-style: italic;">Use your keyboard keys to navigate.</p>
+          <div class="chocolat-parent" data-chocolat-title="Informal Events">
+            <a class="chocolat-image" href="../img/gallery/informal/informal-1.jpg">
+              <img width="100" src="../img/gallery/informal/informal-1.jpg" />
+            </a>
+            <a class="chocolat-image" href="../img/gallery/informal/informal-2.jpg">
+              <img width="100" src="../img/gallery/informal/informal-2.jpg" />
+            </a>
+            <a class="chocolat-image" href="../img/gallery/informal/informal-3.jpg">
+              <img width="100" src="../img/gallery/informal/informal-3.jpg" />
+            </a>
+            <a class="chocolat-image" href="../img/gallery/informal/informal-4.jpg">
+              <img width="100" src="../img/gallery/informal/informal-4.jpg" />
+            </a>
+            <a class="chocolat-image" href="../img/gallery/informal/informal-5.jpg">
+              <img width="100" src="../img/gallery/informal/informal-5.jpg" />
+            </a>
+            <a class="chocolat-image" href="../img/gallery/informal/informal-6.jpg">
+              <img width="100" src="../img/gallery/informal/informal-6.jpg" />
+            </a>
+            <a class="chocolat-image" href="../img/gallery/informal/informal-7.jpg">
+              <img width="100" src="../img/gallery/informal/informal-7.jpg" />
+            </a>
+            <a class="chocolat-image" href="../img/gallery/informal/informal-8.jpg">
+              <img width="100" src="../img/gallery/informal/informal-8.jpg" />
+            </a>
+            <a class="chocolat-image" href="../img/gallery/informal/informal-9.jpg">
+              <img width="100" src="../img/gallery/informal/informal-9.jpg" />
+            </a>
+            <a class="chocolat-image" href="../img/gallery/informal/informal-10.jpg">
+              <img width="100" src="../img/gallery/informal/informal-10.jpg" />
+            </a>
+            <a class="chocolat-image" href="../img/gallery/informal/informal-11.jpg">
+              <img width="100" src="../img/gallery/informal/informal-11.jpg" />
+            </a>
+            <a class="chocolat-image" href="../img/gallery/informal/informal-12.jpg">
+              <img width="100" src="../img/gallery/informal/informal-12.jpg" />
+            </a>
+            <a class="chocolat-image" href="../img/gallery/informal/informal-13.jpg">
+              <img width="100" src="../img/gallery/informal/informal-13.jpg" />
+            </a>
+            <a class="chocolat-image" href="../img/gallery/informal/informal-14.jpg">
+              <img width="100" src="../img/gallery/informal/informal-14.jpg" />
+            </a>
+            <a class="chocolat-image" href="../img/gallery/informal/informal-15.jpg">
+              <img width="100" src="../img/gallery/informal/informal-15.jpg" />
+            </a>
+            <a class="chocolat-image" href="../img/gallery/informal/informal-16.jpg">
+              <img width="100" src="../img/gallery/informal/informal-16.jpg" />
+            </a>
+            <a class="chocolat-image" href="../img/gallery/informal/informal-17.jpg">
+              <img width="100" src="../img/gallery/informal/informal-17.jpg" />
+            </a>
+            <a class="chocolat-image" href="../img/gallery/informal/informal-18.jpg">
+              <img width="100" src="../img/gallery/informal/informal-18.jpg" />
+            </a>
+            <a class="chocolat-image" href="../img/gallery/informal/informal-19.jpg">
+              <img width="100" src="../img/gallery/informal/informal-19.jpg" />
+            </a>
+            <a class="chocolat-image" href="../img/gallery/informal/informal-20.jpg">
+              <img width="100" src="../img/gallery/informal/informal-20.jpg" />
+            </a>
+          </div>
+          <p style="font-style: italic; margin-top: 20px;">Photo Credits: Agnish Mukherjee; Rehman Momin; Renu Meena; Bharath Balasubramanya</p>
+        </div>
+      </div>
+
     </section>
 
     <!-- Other Events Section -->

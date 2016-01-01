@@ -32,17 +32,27 @@
     <!-- Theme & Custom CSS -->
     <link rel="stylesheet" href="../css/style.css">
 
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="../css/chocolat.css">
+
     <!-- jQuery 1.11.1 (Compatible with countdown timer - DO NOT change order of scripts) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Lightbox JS -->
+    <script src="../js/jquery.chocolat.js"></script>
 
     <!-- Google Webfont Loader -->
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js" async></script>
     <script>
-      WebFontConfig = {
-        google: {
-        families: ['Roboto:regular,bold,light:latin']
-        }
-      };
+    $(document).ready(function(){
+    $('.chocolat-parent').Chocolat();
+    });
+
+    WebFontConfig = {
+      google: {
+      families: ['Roboto:regular,bold,light:latin','Montserrat:regular']
+      }
+    };
     </script>
 
 <style>
@@ -53,7 +63,7 @@
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+    background: url(../img/pages/bg/night-bg.png) no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -115,13 +125,13 @@
         <div class="intro-body">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1" style="margin-top:250px;">
-                        <blockquote class="fa fa-2x fa-quote-left">Night events feature well known national and international artists from various fields of expertise such as Music, Dance and Design, among others. It has also been a perfect stage for competitions that cover Singing and Dancing.
-                        <div class="fa fa-quote-right"></div>
-                        </blockquote>
+                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                        <h2 class="brand-heading">Night Events</h2>
+                        <a href="#celebrity" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
                     </div>
                 </div>
-
             </div>
         </div>
     </header>
@@ -134,6 +144,33 @@
                 <p>Nuff’ said. The names say it all. The icing on the cake, this night serves as perfect end to the four day favour, the pièce de résistance of the fest. Eminent personalities like Vishal-Shekhar, Javed Ali, Salim-Suleiman. K.K., Daler Mahendi, Kailash Kher, Euphoria, Mohit Chauhan, Gaurav Dagaonkar, Bombay Rockers and Parikrama have graced the occasion and many more are expected to rock these nights in the forthcoming years. </p>
             </div>
           </div>
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+              <p style="font-style: italic;">Use your keyboard keys to navigate.</p>
+            <div class="chocolat-parent" data-chocolat-title="Celebrity Night">
+              <a class="chocolat-image" href="../img/gallery/celebrity/celebrity-1.jpg">
+                <img width="100" src="../img/gallery/celebrity/celebrity-1.jpg" />
+              </a>
+              <a class="chocolat-image" href="../img/gallery/celebrity/celebrity-2.jpg">
+                <img width="100" src="../img/gallery/celebrity/celebrity-2.jpg" />
+              </a>
+              <a class="chocolat-image" href="../img/gallery/celebrity/celebrity-3.jpg">
+                <img width="100" src="../img/gallery/celebrity/celebrity-3.jpg" />
+              </a>
+              <a class="chocolat-image" href="../img/gallery/celebrity/celebrity-4.jpg">
+                <img width="100" src="../img/gallery/celebrity/celebrity-4.jpg" />
+              </a>
+              <a class="chocolat-image" href="../img/gallery/celebrity/celebrity-5.jpg">
+                <img width="100" src="../img/gallery/celebrity/celebrity-5.jpg" />
+              </a>
+              <a class="chocolat-image" href="../img/gallery/celebrity/celebrity-6.jpg">
+                <img width="100" src="../img/gallery/celebrity/celebrity-6.jpg" />
+              </a>
+            </div>
+            <p style="font-style: italic; margin-top: 20px;">Photo Credits: Arth Patel</p>
+          </div>
+        </div>
+
     </section>
 
     <!-- Dancing Night Section -->
@@ -144,6 +181,33 @@
                    <p>From Bharatnatyam in the South to Bhangra in the North, Garba in the West to Chauu in the East, nothing is left out. Also mired in the concoction, we have got dancing styles like Hip-Hop, Salsa, Jazz, Boogie and Rumba where the students bring out the essence of various cultures through their dances, thus creating an atmosphere of harmony in cultural diversity.</p>
                 </div>
             </div>
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                <p style="font-style: italic;">Use your keyboard keys to navigate.</p>
+              <div class="chocolat-parent" data-chocolat-title="Dancing Night">
+                <a class="chocolat-image" href="../img/gallery/dancing/dancing-1.jpg">
+                  <img width="100" src="../img/gallery/dancing/dancing-1.jpg" />
+                </a>
+                <a class="chocolat-image" href="../img/gallery/dancing/dancing-2.jpg">
+                  <img width="100" src="../img/gallery/dancing/dancing-2.jpg" />
+                </a>
+                <a class="chocolat-image" href="../img/gallery/dancing/dancing-3.jpg">
+                  <img width="100" src="../img/gallery/dancing/dancing-3.jpg" />
+                </a>
+                <a class="chocolat-image" href="../img/gallery/dancing/dancing-4.jpg">
+                  <img width="100" src="../img/gallery/dancing/dancing-4.jpg" />
+                </a>
+                <a class="chocolat-image" href="../img/gallery/dancing/dancing-5.jpg">
+                  <img width="100" src="../img/gallery/dancing/dancing-5.jpg" />
+                </a>
+                <a class="chocolat-image" href="../img/gallery/dancing/dancing-6.jpg">
+                  <img width="100" src="../img/gallery/dancing/dancing-6.jpg" />
+                </a>
+              </div>
+              <p style="font-style: italic; margin-top: 20px;">Photo Credits: Arth Patel</p>
+            </div>
+          </div>
+
 
     </section>
 
@@ -155,6 +219,31 @@
                 <p>Hindustani, Classical, Symphony, Orchestra, Opera, Heavy metal, Punk rock. You name it, they do it. This is the umbrella night where the students and teachers alike come together to enjoy the divine invention or discovery - whichever would you prefer to call it - called Music. The melodious voice and the music transport your mind into Trance and make it harder to discern whether the performers are budding scientists or singers!</p>
 
             </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+              <p style="font-style: italic;">Use your keyboard keys to navigate.</p>
+            <div class="chocolat-parent" data-chocolat-title="Singing Night">
+              <a class="chocolat-image" href="../img/gallery/singing/singing-1.jpg">
+                <img width="100" src="../img/gallery/singing/singing-1.jpg" />
+              </a>
+              <a class="chocolat-image" href="../img/gallery/singing/singing-2.jpg">
+                <img width="100" src="../img/gallery/singing/singing-2.jpg" />
+              </a>
+              <a class="chocolat-image" href="../img/gallery/singing/singing-3.jpg">
+                <img width="100" src="../img/gallery/singing/singing-3.jpg" />
+              </a>
+              <a class="chocolat-image" href="../img/gallery/singing/singing-4.jpg">
+                <img width="100" src="../img/gallery/singing/singing-4.jpg" />
+              </a>
+              <a class="chocolat-image" href="../img/gallery/singing/singing-5.jpg">
+                <img width="100" src="../img/gallery/singing/singing-5.jpg" />
+              </a>
+            </div>
+            <p style="font-style: italic; margin-top: 20px;">Photo Credits: Arth Patel</p>
+          </div>
+        </div>
+
     </section>
 
 
@@ -166,6 +255,34 @@
                 <p>Beauty, Sensuality, Chic, Panache, Runway, Vogue! See all these terms come alive as the Divas and heart throbs of our college walk the red carpet donning various attires which inspire awe and envy, at the same time, in every person's mind. It is one of the most awaited nights of Sparsh, where students get a chance to display their talents required to be the show stopper of the night. The judges are amongst the renowned and certified fashion connoisseurs.</p>
 
             </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+              <p style="font-style: italic;">Use your keyboard keys to navigate.</p>
+            <div class="chocolat-parent" data-chocolat-title="Fashion Night">
+              <a class="chocolat-image" href="../img/gallery/fashion/fashion-1.jpg">
+                <img width="100" src="../img/gallery/fashion/fashion-1.jpg" />
+              </a>
+              <a class="chocolat-image" href="../img/gallery/fashion/fashion-2.jpg">
+                <img width="100" src="../img/gallery/fashion/fashion-2.jpg" />
+              </a>
+              <a class="chocolat-image" href="../img/gallery/fashion/fashion-3.jpg">
+                <img width="100" src="../img/gallery/fashion/fashion-3.jpg" />
+              </a>
+              <a class="chocolat-image" href="../img/gallery/fashion/fashion-4.jpg">
+                <img width="100" src="../img/gallery/fashion/fashion-4.jpg" />
+              </a>
+              <a class="chocolat-image" href="../img/gallery/fashion/fashion-5.jpg">
+                <img width="100" src="../img/gallery/fashion/fashion-5.jpg" />
+              </a>
+              <a class="chocolat-image" href="../img/gallery/fashion/fashion-6.jpg">
+                <img width="100" src="../img/gallery/fashion/fashion-6.jpg" />
+              </a>
+            </div>
+            <p style="font-style: italic; margin-top: 20px;">Photo Credits: Arth Patel</p>
+          </div>
+        </div>
+
     </section>
 
     <!-- EDM Night Section -->
@@ -176,6 +293,37 @@
                 <p>EDM Night is one of the most awaited nights at the fest. The fest was graced by Sunburn last year.</p>
 
             </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+              <p style="font-style: italic;">Use your keyboard keys to navigate.</p>
+            <div class="chocolat-parent" data-chocolat-title="Sunburn Campus">
+              <a class="chocolat-image" href="../img/gallery/sunburn/sunburn-1.jpg">
+                <img width="100" src="../img/gallery/sunburn/sunburn-1.jpg" />
+              </a>
+              <a class="chocolat-image" href="../img/gallery/sunburn/sunburn-2.jpg">
+                <img width="100" src="../img/gallery/sunburn/sunburn-2.jpg" />
+              </a>
+              <a class="chocolat-image" href="../img/gallery/sunburn/sunburn-3.jpg">
+                <img width="100" src="../img/gallery/sunburn/sunburn-3.jpg" />
+              </a>
+              <a class="chocolat-image" href="../img/gallery/sunburn/sunburn-4.jpg">
+                <img width="100" src="../img/gallery/sunburn/sunburn-4.jpg" />
+              </a>
+              <a class="chocolat-image" href="../img/gallery/sunburn/sunburn-5.jpg">
+                <img width="100" src="../img/gallery/sunburn/sunburn-5.jpg" />
+              </a>
+              <a class="chocolat-image" href="../img/gallery/sunburn/sunburn-6.jpg">
+                <img width="100" src="../img/gallery/sunburn/sunburn-6.jpg" />
+              </a>
+              <a class="chocolat-image" href="../img/gallery/sunburn/sunburn-7.jpg">
+                <img width="100" src="../img/gallery/sunburn/sunburn-7.jpg" />
+              </a>
+            </div>
+            <p style="font-style: italic; margin-top: 20px;">Photo Credits: The Moneta</p>
+          </div>
+        </div>
+
     </section>
 
     <!-- Other Events Section -->
